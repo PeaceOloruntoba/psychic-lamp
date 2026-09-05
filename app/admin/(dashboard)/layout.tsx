@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { LayoutDashboard, Package, Wrench, ClipboardList, Sun, LogOut } from "lucide-react";
-import { signOutAction } from "./login/actions";
+import { signOutAction } from "../login/actions";
 
 const NAV = [
   { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
