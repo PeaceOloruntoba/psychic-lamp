@@ -1,16 +1,16 @@
 /**
- * Placeholder "live" photography used across the public site so the UI
- * doesn't feel empty before real jobsite photos are uploaded via the
- * admin dashboard. All sourced from Unsplash under the Unsplash License
- * (free for commercial use, no attribution required).
+ * Local brand illustrations bundled in /public/images — used to keep the
+ * UI visually alive before real jobsite photos are uploaded via the admin
+ * dashboard's Cloudinary uploader. Fully local: no external image host,
+ * no hotlinking, nothing that can break if a third-party CDN is
+ * unreachable or blocked.
+ *
+ * Swap any of these out any time by dropping a same-named file into
+ * /public/images (or by changing the path below to point elsewhere).
  */
 export const STOCK_IMAGES = {
-  heroRooftop:
-    "https://images.unsplash.com/photo-1745187946672-2c1d8cf26a2b?auto=format&fit=crop&w=1600&q=80",
-  technicianInstalling:
-    "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=1200&q=80",
-  aerialSolarField:
-    "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1600&q=80",
-  solarPanelCloseup:
-    "https://images.unsplash.com/photo-1664828113992-8dd7a26275a0?auto=format&fit=crop&w=1200&q=80",
+  heroRooftop: "/images/hero-solar.png",
+  technicianInstalling: "/images/about-team.png",
+  aerialSolarField: "/images/services-field.png",
+  solarPanelCloseup: "/images/products-cells.png",
 };

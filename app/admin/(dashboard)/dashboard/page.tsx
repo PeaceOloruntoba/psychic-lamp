@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ClipboardList, Clock, PackageCheck, Wallet } from "lucide-react";
 import { createServerSupabaseClient } from "@/lib/supabase-server";
 import { formatNaira, formatDate, ORDER_STATUS_STYLES, ORDER_STATUS_LABELS } from "@/lib/utils";
@@ -49,8 +50,15 @@ export default async function AdminDashboardPage() {
 
   return (
     <div>
-      <h1 className="font-display text-2xl font-bold text-white">Dashboard</h1>
-      <p className="mt-1 text-sm text-slate-500">Overview of your store&apos;s activity.</p>
+      <div className="flex items-center gap-3">
+        {/* <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white p-1.5">
+          <Image src="/images/logo.jpg" alt="Vozaro logo" width={32} height={32} className="h-full w-full object-contain" />
+        </span> */}
+        <div>
+          <h1 className="font-display text-2xl font-bold text-white">Dashboard</h1>
+          <p className="text-sm text-slate-500">Overview of your store&apos;s activity.</p>
+        </div>
+      </div>
 
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {cards.map((c) => (

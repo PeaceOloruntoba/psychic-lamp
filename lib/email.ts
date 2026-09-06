@@ -22,6 +22,8 @@ function getTransporter() {
 
 function invoiceHtml(order: Order, product: Product | null) {
   const price = product ? formatNaira(product.price) : "To be confirmed";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "";
+  const logoUrl = `${siteUrl}/images/logo.jpg`;
   const productRow = product
     ? `<tr>
          <td style="padding:12px 0;border-bottom:1px solid #23324a;color:#e2e8f0;">${product.title}</td>
@@ -34,8 +36,21 @@ function invoiceHtml(order: Order, product: Product | null) {
     <table role="presentation" width="100%" style="max-width:560px;margin:0 auto;background:#111d34;border-radius:12px;overflow:hidden;border:1px solid #23324a;">
       <tr>
         <td style="background:#8FD11F;padding:20px 28px;">
-          <p style="margin:0;color:#0F172A;font-weight:800;font-size:18px;letter-spacing:0.3px;">VOZARO GLOBAL RESOURCE LTD.</p>
-          <p style="margin:2px 0 0;color:#0F172A;font-size:12px;font-weight:600;">Light wey no dey fail</p>
+          <table role="presentation" width="100%">
+            <tr>
+              <td width="48" style="vertical-align:middle;">
+                <table role="presentation" width="40" height="40" style="background:#ffffff;border-radius:9999px;">
+                  <tr><td align="center" valign="middle">
+                    <img src="${logoUrl}" width="30" height="30" alt="Vozaro" style="display:block;border-radius:9999px;object-fit:contain;" />
+                  </td></tr>
+                </table>
+              </td>
+              <td style="vertical-align:middle;padding-left:10px;">
+                <p style="margin:0;color:#0F172A;font-weight:800;font-size:18px;letter-spacing:0.3px;">VOZARO GLOBAL RESOURCE LTD.</p>
+                <p style="margin:2px 0 0;color:#0F172A;font-size:12px;font-weight:600;">Light wey no dey fail</p>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
       <tr>
