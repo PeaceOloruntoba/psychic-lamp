@@ -2,6 +2,7 @@ import { createServerSupabaseClient } from "@/lib/supabase-server";
 import { OrderModalProvider } from "@/components/OrderModalContext";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 import ServicesGrid from "@/components/ServicesGrid";
 import ProductShowcase from "@/components/ProductShowcase";
 import DigitalBookPreview from "@/components/DigitalBookPreview";
@@ -34,6 +35,7 @@ export default async function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <About />
         <ServicesGrid services={services} />
         <ProductShowcase products={physicalProducts} />
         <DigitalBookPreview books={digitalBooks} />

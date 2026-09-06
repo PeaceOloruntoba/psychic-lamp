@@ -22,9 +22,11 @@ export const metadata: Metadata = {
     template: "%s | Vozaro Global Resource Ltd.",
   },
   description:
-    "Vozaro Global Resource Limited supplies and installs solar panels, inverters, and batteries across Nigeria, plus electrical, CCTV, and electric fence services. Light wey no dey fail.",
+    "Vozaro Global Resource Limited is a renewable energy company supplying and installing solar panels, inverters, and batteries across Nigeria, plus electrical, CCTV, and electric fence services. Light wey no dey fail.",
   keywords: [
+    "renewable energy Nigeria",
     "solar installation Nigeria",
+    "clean energy Delta State",
     "inverter repair Delta State",
     "Vozaro Global Resource",
     "solar panels Oghara",
@@ -33,8 +35,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vozaro Global Resource Ltd. | Light Wey No Dey Fail",
     description:
-      "Solar, inverter, and electrical solutions you can trust — sales, installation, maintenance, and audits.",
+      "Renewable energy solutions you can trust — solar, inverter, electrical, and CCTV sales, installation, maintenance, and audits.",
     type: "website",
+    images: ["/images/logo.jpg"],
+  },
+  icons: {
+    icon: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
   },
 };
 

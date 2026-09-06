@@ -1,7 +1,9 @@
 "use client";
 
-import { Sun, ShieldCheck, Zap } from "lucide-react";
+import Image from "next/image";
+import { ShieldCheck, Zap } from "lucide-react";
 import { useOrderModal } from "./OrderModalContext";
+import { STOCK_IMAGES } from "@/lib/stock-images";
 
 export default function Hero() {
   const { openOrderModal } = useOrderModal();
@@ -17,16 +19,18 @@ export default function Hero() {
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="mb-5 text-sm font-medium text-solar-400">
-              Solar · Inverters · Electrical · CCTV — Oghara, Delta State
+              Renewable Energy Solutions — Oghara, Delta State, Nigeria
             </p>
             <h1 className="text-balance font-display text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-6xl">
               Light wey no dey fail.
             </h1>
             <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-slate-400">
-              We design, supply, and install solar and inverter systems that
-              keep your home or business running — collaborating with
-              manufacturers across China, Canada, India, and Germany to bring
-              you dependable power, built to last.
+              Vozaro Global Resource Ltd. is on a mission to make renewable
+              energy accessible and affordable for everyone. We design,
+              supply, and install solar and inverter systems that let the
+              sun cover your electricity expenses — collaborating with
+              manufacturers across China, Canada, India, and Germany to
+              bring you clean, dependable power built to last.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -54,15 +58,21 @@ export default function Hero() {
           </div>
 
           <div className="relative lg:col-span-5">
-            <div className="relative mx-auto aspect-square max-w-md rounded-[2rem] border border-navy-700 bg-navy-800/60 p-8 shadow-glow">
-              <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
-                <span className="flex h-20 w-20 items-center justify-center rounded-full bg-solar-500/15">
-                  <Sun size={40} className="text-solar-400" />
-                </span>
-                <p className="font-display text-2xl font-semibold text-white">
+            <div className="relative mx-auto aspect-square max-w-md overflow-hidden rounded-[2rem] border border-navy-700 shadow-glow">
+              <Image
+                src={STOCK_IMAGES.heroRooftop}
+                alt="Solar panels installed on a rooftop under a clear sky"
+                fill
+                priority
+                sizes="(max-width: 1024px) 90vw, 420px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/10 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <p className="font-display text-xl font-semibold text-white">
                   Powering homes &amp; businesses
                 </p>
-                <p className="text-sm text-slate-400">
+                <p className="text-sm text-slate-300">
                   Solar panels · Inverters · Battery banks
                 </p>
               </div>
@@ -77,7 +87,7 @@ export default function Hero() {
                 icon={<ShieldCheck size={16} className="text-amber-400" />}
                 label="Warranty backed"
                 value="Genuine parts, real support"
-                className="-right-6 bottom-10 hidden sm:flex"
+                className="-right-6 bottom-28 hidden sm:flex"
               />
             </div>
           </div>

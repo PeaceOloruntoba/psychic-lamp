@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Sun } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { useOrderModal } from "./OrderModalContext";
 
 const LINKS = [
+  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Products", href: "#products" },
   { label: "Digital Books", href: "#books" },
@@ -30,9 +32,9 @@ export default function Navbar() {
       }`}
     >
       <nav className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between">
-        <a href="#top" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-solar-500">
-            <Sun size={18} className="text-navy-900" />
+        <a href="#top" className="flex items-center gap-2.5">
+          <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white p-1">
+            <Image src="/images/logo.jpg" alt="Vozaro Global Resource logo" width={32} height={32} className="h-full w-full object-contain" />
           </span>
           <span className="font-display text-base font-bold tracking-tight text-white">
             VOZARO

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MapPin, Phone, Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
@@ -8,6 +9,9 @@ export default function Footer() {
       <div className="container-px mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
+            <span className="mb-3 flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white p-1.5">
+              <Image src="/images/logo.jpg" alt="Vozaro Global Resource logo" width={40} height={40} className="h-full w-full object-contain" />
+            </span>
             <p className="font-display text-lg font-bold text-white">VOZARO</p>
             <p className="text-sm text-slate-500">Global Resource Ltd.</p>
             <p className="mt-4 text-sm leading-relaxed text-slate-400">

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { LayoutDashboard, Package, Wrench, ClipboardList, Sun, LogOut } from "lucide-react";
+import Image from "next/image";
+import { LayoutDashboard, Package, Wrench, ClipboardList, LogOut } from "lucide-react";
 import { signOutAction } from "../login/actions";
 
 const NAV = [
@@ -13,9 +14,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <div className="min-h-screen bg-navy-950 lg:flex">
       <aside className="hidden w-64 shrink-0 flex-col border-r border-navy-800 bg-navy-900 lg:flex">
-        <div className="flex h-16 items-center gap-2 border-b border-navy-800 px-6">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-solar-500">
-            <Sun size={16} className="text-navy-900" />
+        <div className="flex h-16 items-center gap-2.5 border-b border-navy-800 px-6">
+          <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white p-1">
+            <Image src="/images/logo.jpg" alt="Vozaro logo" width={24} height={24} className="h-full w-full object-contain" />
           </span>
           <span className="font-display text-sm font-bold text-white">VOZARO Admin</span>
         </div>
