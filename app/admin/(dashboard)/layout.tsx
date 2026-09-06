@@ -44,7 +44,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
       <div className="flex-1">
         <div className="flex h-16 items-center justify-between border-b border-navy-800 bg-navy-900 px-5 lg:hidden">
-          <span className="font-display text-sm font-bold text-white">VOZARO Admin</span>
+          <div className="flex items-center gap-2.5">
+            <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white p-1">
+              <Image src="/images/logo.jpg" alt="Vozaro logo" width={24} height={24} className="h-full w-full object-contain" />
+            </span>
+            <span className="font-display text-sm font-bold text-white">VOZARO Admin</span>
+          </div>
           <form action={signOutAction}>
             <button className="text-sm text-slate-400 hover:text-red-400">Sign out</button>
           </form>
